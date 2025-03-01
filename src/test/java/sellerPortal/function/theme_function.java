@@ -17,4 +17,8 @@ public class theme_function extends basePage {
     public void clickCreateSellpage(){
         commonFunction.click(themePage.createSellpageBtn);
     }
+    public void hoverImageFreshsea(){commonFunction.Hover(themePage.imageFreshsea);};
+    public void clickCreateSellpage2(){
+        commonFunction.click(themePage.creatSellpageFreshseaBtn);
+    }
 }

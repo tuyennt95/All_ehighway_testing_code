@@ -9,13 +9,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class requestSourcingFulfill extends fulfill {
+    public String email = "csnew@example.com";
+    public String password ="csnew@123";
     @Test(priority = 1)
     public void verifyRequestSourcing() throws InterruptedException, IOException {
 
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-//        loginFunction.login("fulfiller", "fulfiller@123");
-        loginFunction.login("wopigi23@gronasu.com","wopigi23@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -29,8 +29,7 @@ public class requestSourcingFulfill extends fulfill {
     public void respondFromListProduct() throws InterruptedException, IOException {
 
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -42,8 +41,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void respondRejectRequest() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -55,8 +53,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void verifyRejectRequestBySeller() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -66,9 +63,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void verifyAcceptRequestBySeller() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-//        loginFunction.login("fulfiller", "fulfiller@123");
-        loginFunction.login("wopigi23@gronasu.com","wopigi23@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -78,8 +73,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void respondByTheSameProduct() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -89,8 +83,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void verifyRequest() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);
@@ -101,8 +94,7 @@ public class requestSourcingFulfill extends fulfill {
     @Test
     public void respondByEditProductSeller() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-        loginFunction.login("fulfiller", "fulfiller@123");
+        loginFunction.login(email,password);
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewRequestSourcingPage();
         requestSourcing_function requestSourcingFunction = new requestSourcing_function(driver);

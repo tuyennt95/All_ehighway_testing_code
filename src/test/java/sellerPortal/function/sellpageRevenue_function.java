@@ -13,11 +13,12 @@ public class sellpageRevenue_function extends basePage {
      sellpageRevenue_page sellpageRevenuePage = new sellpageRevenue_page();
      public void verifyRevenueSellpage() throws InterruptedException {
          commonFunction.switchWindowByTitle("Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
-//         commonFunction.switchWindowByIndex(2);
+
          driver.navigate().refresh();
-         Thread.sleep(180000);
+         Thread.sleep(100000);
          driver.navigate().refresh();
-//         commonFunction.reloadPage(sellpageRevenuePage.sellpageTitle);
+
+         Thread.sleep(3000);
          commonFunction.verifyElement(sellpageRevenuePage.announcement,"Sale Upto 30%");
          commonFunction.verifyElement(sellpageRevenuePage.sellpageTitle,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
 //         commonFunction.verifyElement(sellpageRevenuePage.priceVariant,"$50.00");

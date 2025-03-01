@@ -15,5 +15,6 @@ public class login_function extends basePage {
         commonFunction.senKeys(loginPage.email,email);
         commonFunction.senKeys(loginPage.password,pass);
         commonFunction.click(loginPage.loginBtn);
+        commonFunction.verifyPage(loginPage.loginLogo);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="requestSourcing">
+<suite name="requestPaygate">
     <test name="seller request sourcing">
         <classes>
             <class name="sellerPortal.test.requestSourcingSeller">
@@ -64,6 +64,7 @@
         <classes>
             <class name="sellerPortal.test.verifySellpage">
                 <methods>
+                    <include name="verifySellpage"/>
                     <include name="checkoutPaypal"/>
                 </methods>
             </class>

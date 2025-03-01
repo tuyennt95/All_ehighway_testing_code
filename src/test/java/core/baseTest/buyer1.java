@@ -17,7 +17,7 @@ public class buyer1 {
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        String url = "https://sellpageconfigpaypalpro.devshop.ehighway.co/";
+        String url = "https://uwfptwoitd.rochenianly.space/";
         driver.get(url);
     }
     @AfterMethod

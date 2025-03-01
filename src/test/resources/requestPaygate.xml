@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="requestPaygate">
+    <test name="seller request sourcing">
+        <classes>
+            <class name="sellerPortal.test.requestSourcingSeller">
+                <methods>
+                    <include name="requestSourcing2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="fulfill verify request Sourcing">
+        <classes>
+            <class name="fulfillPortal.test.requestSourcingFulfill">
+                <methods>
+                    <include name="verifyRequestSourcing"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="seller respond fulfill">
+        <classes>
+            <class name="sellerPortal.test.requestSourcingSeller">
+                <methods>
+                    <include name="verifyRespondByNewProductFromFulfill"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify respond accept request by Seller">
+        <classes>
+            <class name="fulfillPortal.test.requestSourcingFulfill">
+                <methods>
+                    <include name="verifyAcceptRequestBySeller"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create domain From Private Product">
+        <classes>
+            <class name="sellerPortal.test.createSellpage">
+                <methods>
+                    <include name="createDomainPrivateProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="edit + Request paygate">
+        <classes>
+            <class name="sellerPortal.test.requestPaygate">
+                <methods>
+                    <include name="requestPaygate"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="admin Respond request paygate">
+        <classes>
+            <class name="adminPortal.test.requestPaygate"></class>
+        </classes>
+    </test>
+    <test name="checkout Paypal">
+        <classes>
+            <class name="sellerPortal.test.verifySellpage">
+                <methods>
+                    <include name="verifySellpage"/>
+                    <include name="checkoutPaypal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify Order Paypal Seller Portal">
+        <classes>
+            <class name="sellerPortal.test.myOrder">
+                <methods>
+                    <include name="verifyOrderPaypal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="verify Order Paypal Fulill Portal">
+        <classes>
+            <class name="fulfillPortal.test.orderList">
+                <methods>
+                    <include name="verifyOrderDetailPaypal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+<!--     Test -->
+</suite> <!-- Suite -->

@@ -53,6 +53,16 @@ public class requestSourcing_page {
     //edit product seller
     public By productNameRespond = By.xpath("//div[@class='ant-modal-header']/div/div/span");
     public By variant1 = By.xpath("//div[@class='d-flex flex-wrap']/button[1]/span");
+
+    public By colorPuple = By.xpath("//div[@class='d-flex flex-wrap']//button[1]");
+    public By sizeS = By.xpath("//span[contains(text(),'S')]//parent::button");
+
+    public By colorGray = By.xpath("//div[@class='d-flex flex-wrap']//button[2]");
+    public By sizeM = By.xpath("//span[contains(text(),'M')]//parent::button");
+
+    public By colorBlue = By.xpath("//div[@class='d-flex flex-wrap']//button[3]");
+    public By sizeL = By.xpath("//span[contains(text(),'L')]//parent::button");
+
     public By variant2 = By.xpath("//div[@class='d-flex flex-wrap']/button[2]/span");
     public By variant3 = By.xpath("//div[@class='d-flex flex-wrap']/button[3]/span");
     public By variant4 = By.xpath("//div[@class='d-flex flex-wrap']/button[4]/span");

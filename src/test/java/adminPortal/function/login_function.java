@@ -13,9 +13,9 @@ public class login_function extends basePage {
     common_function commonFunction = new common_function(driver);
     login_page loginPage = new login_page();
     public void loginAdmin(){
-        commonFunction.senKeys(loginPage.userName,"vendor_admin");
-        commonFunction.senKeys(loginPage.passwordAdmin,"vendor_admin@123");
+        commonFunction.senKeys(loginPage.userName,"cs-payment");
+        commonFunction.senKeys(loginPage.passwordAdmin,"payment@123");
         commonFunction.click(loginPage.loginAdminBtn);
-        commonFunction.verifyElement(loginPage.titleAdmin,"eHighWay Admin");
+        commonFunction.verifyElement(loginPage.titleAdmin,"The Plus One Admin");
     }
 }

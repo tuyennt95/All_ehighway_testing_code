@@ -16,9 +16,10 @@ public class fulfillPortal_function extends basePage {
         commonFunction.click(fulfillPortalPage.productNav);
         commonFunction.click(fulfillPortalPage.addProductBtn);
     }
-    public void viewEditProductPage(){
+    public void viewEditProductPage() throws InterruptedException {
         commonFunction.verifyPage(fulfillPortalPage.Fulfill);
         commonFunction.click(fulfillPortalPage.productNav);
+        Thread.sleep(5000);
         commonFunction.click(fulfillPortalPage.productName);
         commonFunction.click(fulfillPortalPage.editBtn);
 //        commonFunction.verifyPage(addProductPage.editSellpageTitle);

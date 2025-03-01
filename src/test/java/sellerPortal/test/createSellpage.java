@@ -5,15 +5,17 @@ import org.testng.annotations.Test;
 import sellerPortal.function.*;
 
 public class createSellpage extends seller {
-    @Test
-    public void CreateEhighwaySellpage() throws InterruptedException {
+    public String email = "soyero8019@ociun.com";
+    public String password = "soyero8019@123";
+   /*  Public product đã ẩn
+   @Test
+    public void CreateTPOSellpage() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tuyennguyen.aion@example.com", "eHighway@123");
-        loginFunction.login("botige6044@aaorsi.com", "tWvgKT9t");
-//        loginFunction.login("goriyo9522@bnovel.com", "goriyo9522@123");
-//        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
+        seller_function sellerFunction = new seller_function(driver);
+        sellerFunction.selectTeam();
         productPubic_function productPublicFunction = new productPubic_function(driver);
-        productPublicFunction.searchProduct("Products for test automation");
+        productPublicFunction.searchProduct("Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
         Thread.sleep(3000);
 
         productPublicFunction.hoverImage();
@@ -24,7 +26,7 @@ public class createSellpage extends seller {
         themeFunction.clickCreateSellpage();
 
         createDomain_function createDomainFunction = new createDomain_function(driver);
-        createDomainFunction.createEhighwayDomain();
+        createDomainFunction.createTPODomain();
 //        createDomainFunction.clickConfirmBtn();
 //
 //        editSellpage_function editSellpageFunction = new editSellpage_function(driver);
@@ -38,12 +40,9 @@ public class createSellpage extends seller {
     @Test()
     public void createCustomizeDomain() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tuyennguyen.aion@example.com", "eHighway@123");
-        loginFunction.login("botige6044@aaorsi.com", "tWvgKT9t");
-//        loginFunction.login("goriyo9522@bnovel.com", "goriyo9522@123");
-//        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
         productPubic_function productPublicFunction = new productPubic_function(driver);
-        productPublicFunction.searchProduct("Products for test automation");
+        productPublicFunction.searchProduct("Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
         Thread.sleep(3000);
 
         productPublicFunction.hoverImage();
@@ -55,20 +54,21 @@ public class createSellpage extends seller {
 
         createDomain_function createDomainFunction = new createDomain_function(driver);
         createDomainFunction.createCustomizeDomain();
-    }
+    }*/
     @Test
     public void createDomainMyProduct() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
-        sellerFunction.selectTeam();
+        sellerFunction.selectDefaultTeam();
 
-        sellerFunction.viewMyProducts();
-        myProducts_function myProductsFunction = new myProducts_function(driver);
+        sellerFunction.viewTestProducts();
+        testProducts_function myProductsFunction = new testProducts_function(driver);
         myProductsFunction.viewProductDetail();
 
         theme_function themeFunction = new theme_function(driver);
+
         themeFunction.hoverImageRevenue();
         themeFunction.clickCreateSellpage();
 
@@ -78,14 +78,13 @@ public class createSellpage extends seller {
     @Test
     public void createDomainPrivateProduct() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
-        sellerFunction.selectTeam();
+        sellerFunction.selectDefaultTeam();
 
-        sellerFunction.viewMyProducts();
-        myProducts_function myProductsFunction = new myProducts_function(driver);
-        myProductsFunction.viewPrivateProduct();
+        sellerFunction.viewFulfillableProducts();
+        testProducts_function myProductsFunction = new testProducts_function(driver);
         myProductsFunction.viewProductDetail();
 
         theme_function themeFunction = new theme_function(driver);

@@ -55,15 +55,32 @@ public class seller_function extends basePage {
     }
     public void selectTeam() throws InterruptedException {
         commonFunction.click(sellerPage.filterTeam);
+        commonFunction.senKeys(sellerPage.searchTeam,"Team Tester");
         commonFunction.click(sellerPage.teamTester);
+//        commonFunction.click(sellerPage.teamDefaul);
         commonFunction.click(sellerPage.body);
         Thread.sleep(3000);
     }
-    public  void viewMyProducts() throws InterruptedException {
+    public void selectDefaultTeam () throws InterruptedException {
+        commonFunction.click(sellerPage.filterTeam);
+        commonFunction.senKeys(sellerPage.searchTeam,"Team Default");
+        commonFunction.click(sellerPage.teamDefaul);
+        commonFunction.click(sellerPage.body);
+        Thread.sleep(3000);}
+
+    public  void viewTestProducts() throws InterruptedException {
         commonFunction.Hover(sellerPage.nav);
         commonFunction.click(sellerPage.collapse);
         commonFunction.click(sellerPage.productsNav);
-        commonFunction.click(sellerPage.myProductsNav);
+        commonFunction.click(sellerPage.testProductsNav);
+        Thread.sleep(2000);
+        commonFunction.click(sellerPage.collapse);
+    }
+    public  void viewFulfillableProducts() throws InterruptedException {
+        commonFunction.Hover(sellerPage.nav);
+        commonFunction.click(sellerPage.collapse);
+        commonFunction.click(sellerPage.productsNav);
+        commonFunction.click(sellerPage.fulfillableProductsNav);
         Thread.sleep(2000);
         commonFunction.click(sellerPage.collapse);
     }

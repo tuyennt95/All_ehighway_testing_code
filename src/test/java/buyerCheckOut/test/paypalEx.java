@@ -12,7 +12,7 @@ public class paypalEx extends buyer {
     }
     @Test
     public void orders() throws InterruptedException {
-        for (int i = 0; i <= 40 ; i++) {
+        for (int i = 0; i <= 20; i++) {
             setup();
             paypalCheckout();
             teardown();

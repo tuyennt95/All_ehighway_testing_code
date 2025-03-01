@@ -163,20 +163,22 @@ public class editSellpage_page {
     public By headerPoupUpsale = By.xpath("//div[contains(text(),'Set up for upsale page') and @class='ant-modal-title']");
     public By hyperlinkAddSellpage = By.xpath("//span[contains(text(),'Add another sellpage')]");
     public By searchBox = By.xpath("//div[@class='ant-form-item m-0']");
-    public By sellpageUpsale2 = By.xpath("//body/div[12]//div[@title='themerevenuetiktokpixel.rochenianly.space']");
+    public By inputSearchBox = By.xpath("//div[@class='ant-form-item m-0']//input");
+    public By sellpageUpsale2 = By.xpath("//body/div[12]//div[@title='bra.kinthemain.online']");
     public By searchBox2 = By.xpath("//span[contains(text(),'Select sellpage')]//parent::div//parent::div");
-    public By sellpageUpsale1 = By.xpath("//div[@title='hoaphuongdoxanhla.rochenianly.space']");
+    public By inputsearchBox2 = By.xpath("//span[contains(text(),'Select sellpage')]//parent::div//parent::div//input");
+    public By sellpageUpsale1 = By.xpath("//div[@title='revenue3105.kinthemain.online']");
     public By saveUpsaleBtn = By.xpath("//div[@class='ant-modal-footer']//descendant::button[2]");
     public By previewBtn = By.xpath("//div[@class='ant-row ant-row-end']//descendant::button/span");
     //config paygate
     public By addPaygateBtn = By.xpath("//div[contains(text(),'Add paygate')]");
     public By selectPaypalPaygate = By.xpath("//input[@id='paypal']//ancestor::div[1]");
-    public By paypalPaygate1 = By.xpath("//div[@title='Paygate 1110 staging']");
+    public By paypalPaygate1 = By.xpath("//div[@title='Paygate Demo']");
 
-    public By requestPaygatePaypal = By.xpath("//div[contains(text(),'Become eHighway partner')]//parent::div");
+    public By requestPaygatePaypal = By.xpath("//div[contains(text(),'Become The Plus One partner')]//parent::div");
     public By selectStripePaygate = By.xpath("//input[@id='stripe']//ancestor::div[1]");
-    public By stripePaygate1 = By.xpath("//div[@title='Paygate Stripe 1110']");
-    public By requestPaygateStripe = By.xpath("//div[@id='stripe_list']//ancestor::div[2]/div/div[@class='rc-virtual-list']//div[contains(text(),'Become eHighway partner')]");
+    public By stripePaygate1 = By.xpath("//div[@title='Stripe Demo']");
+    public By requestPaygateStripe = By.xpath("//div[@id='stripe_list']//ancestor::div[2]/div/div[@class='rc-virtual-list']//div[contains(text(),'Become The Plus One partner')]");
     public By configBtn = By.xpath("//span[contains(text(),'Config')]//parent::button");
     public By sectionConfigPaygate = By.xpath("//div[contains(text(),'Config Paygate')]//ancestor::div[3]");
     public By status = By.xpath("//div[@role ='status']");

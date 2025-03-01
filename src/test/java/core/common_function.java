@@ -28,7 +28,7 @@ public class common_function extends basePage {
         element.sendKeys(value);
     }
     public void click(By by){
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        WebElement element = wait. until(ExpectedConditions.visibilityOfElementLocated(by));
         element.click();
     }
     public void selectByVisibleText(By by, String text){
@@ -204,8 +204,6 @@ public class common_function extends basePage {
         } else {
             System.out.println("Không thể tìm thấy phần tử sau " + maxRefreshAttempts + " lần refresh.");
         }
-//
-//        // Đóng trình duyệt
-//        driver.quit();
+
     }
 }

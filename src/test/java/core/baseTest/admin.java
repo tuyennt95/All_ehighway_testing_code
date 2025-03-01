@@ -17,8 +17,7 @@ public class admin {
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-//        String url ="https://admin-web.devzone.ehighway.co/login";
-        String url ="https://admin-web.staging.ehighway.co/login";
+        String url ="https://paygate.devzone.theplus1.net/login";
         driver.get(url);
     }
     @AfterMethod

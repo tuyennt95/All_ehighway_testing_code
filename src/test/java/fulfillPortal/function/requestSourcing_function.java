@@ -20,7 +20,7 @@ public class requestSourcing_function extends basePage {
     common_function commonFunction =new common_function(driver);
     requestSourcingseller_function requestSourcingsellerFunction = new requestSourcingseller_function(driver);
     public void searchRequest(){
-        commonFunction.senKeyPrice(requestSourcingPage.searchRequest, "dvi");
+        commonFunction.senKeyPrice(requestSourcingPage.searchRequest, "BYZ");
     }
     public void verifyrequest() throws InterruptedException, IOException {
         Properties props = new Properties();
@@ -42,7 +42,7 @@ public class requestSourcing_function extends basePage {
     public void verifyDetailRequest(){
         commonFunction.click(requestSourcingPage.numberRequest);
         commonFunction.verifyElement(requestSourcingPage.productRequestDetail,"Quick Dry Sport Jacket");
-        commonFunction.verifyElement(requestSourcingPage.sellerRequestDetail,"Seller: sogajib191@alvisani.com");
+        commonFunction.verifyElement(requestSourcingPage.sellerRequestDetail,"Seller: soyero8019@ociun.com");
         commonFunction.verifyElement(requestSourcingPage.statusRequestDetail,"Status: Opening");
         commonFunction.click(requestSourcingPage.linkProductRequest);
         commonFunction.verifyElement(requestSourcingPage.productName,"Quick Dry Sport Jacket");
@@ -112,8 +112,9 @@ public class requestSourcing_function extends basePage {
         commonFunction.verifyPage(requestSourcingPage.textCloseRequest);
         commonFunction.verifyElement(requestSourcingPage.textCloseRequest,"This request was closed");
     }
-    public void verifyAcceptRequestBySeller(){
+    public void verifyAcceptRequestBySeller() throws InterruptedException {
         commonFunction.click(requestSourcingPage.numberRequest);
+        Thread.sleep(1000);
         commonFunction.verifyPage(requestSourcingPage.textCloseRequest);
         commonFunction.verifyElement(requestSourcingPage.statusRequestDetail,"Status: Accepted");
         commonFunction.verifyElement(requestSourcingPage.textCloseRequest,"This request was closed");
@@ -139,7 +140,7 @@ public class requestSourcing_function extends basePage {
     }
     public void respondByTheSameProduct() throws InterruptedException {
         commonFunction.click(requestSourcingPage.numberRequest);
-        commonFunction.verifyElement(requestSourcingPage.productRequest,"Product Title + Team defaul");
+        commonFunction.verifyElement(requestSourcingPage.productRequest,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
         commonFunction.click(requestSourcingPage.productNameRequest);
         commonFunction.click(requestSourcingPage.respondBtn);
         commonFunction.verifyElement(requestSourcingPage.sameProductMenu,"Same product");
@@ -194,14 +195,15 @@ public class requestSourcing_function extends basePage {
         commonFunction.click(requestSourcingPage.respondBtn1);
         Thread.sleep(2000);
     }
-    public void verifyRequest(){
+    public void verifyRequest() throws InterruptedException {
         commonFunction.click(requestSourcingPage.numberRequest);
+        Thread.sleep(5000);
         commonFunction.verifyElement(requestSourcingPage.statusRequestDetail,"Status: Accepted");
         commonFunction.verifyPage(requestSourcingPage.textCloseRequest);
     }
     public void respondByEditProductSeller() throws InterruptedException {
         commonFunction.click(requestSourcingPage.numberRequest);
-        commonFunction.verifyElement(requestSourcingPage.productRequest,"Product Title + Team defaul");
+        commonFunction.verifyElement(requestSourcingPage.productRequest,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
         commonFunction.click(requestSourcingPage.productNameRequest);
         commonFunction.click(requestSourcingPage.respondBtn);
         commonFunction.verifyElement(requestSourcingPage.valueAction,"By editing on Seller Product");
@@ -213,7 +215,6 @@ public class requestSourcing_function extends basePage {
         driver.switchTo().defaultContent();
         addProductFunction.editSpecificationProduct();
         driver.switchTo().defaultContent();
-//        addProductFunction.editImage();
         addProductFunction.editPricing();
         addProductFunction.editVariants();
         addProductFunction.editShippingInfomation();

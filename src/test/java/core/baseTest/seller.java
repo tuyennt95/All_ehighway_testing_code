@@ -15,15 +15,13 @@ public class seller {
 //        ChromeDriverService service = new ChromeDriverService.Builder()
 //                .build();
 //        driver = new ChromeDriver(service);
-//        driver =new FirefoxDriver();
+////        driver =new FirefoxDriver();
+//        System.setProperty("webdriver.http.factory", "jdk-http-client");
         driver = new ChromeDriver();
-//        String source = "D:\\google\\chromedriver-win64\\chromedriver.exe";
-//        System.setProperty("webdriver.chrome.driver",source);
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-//        String url ="https://seller.devzone.ehighway.co/login";
-        String url ="https://seller.staging.ehighway.co/login";
+        String url ="https://seller.devzone.theplus1.net/login";
         driver.get(url);
     }
     @AfterMethod

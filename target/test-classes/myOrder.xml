@@ -24,15 +24,14 @@
     <test name = "edit sellpage">
         <classes>
             <class name = "sellerPortal.test.editSellpage" />
-
         </classes>
     </test>
     <test name = "check out Paypal">
         <classes>
             <class name = "sellerPortal.test.verifySellpage" >
                 <methods>
+                    <include name="verifySellpage"/>
                     <include name="checkoutPaypal"/>
-<!--                    <include name="checkoutStripe"/>-->
                 </methods>
             </class>
         </classes>

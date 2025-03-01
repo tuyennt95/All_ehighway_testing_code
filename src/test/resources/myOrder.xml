@@ -1,0 +1,66 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "my order" verbose="10">
+    <test name = "test product">
+        <classes>
+            <class name = "sellerPortal.test.Product" >
+                <methods>
+                    <include name="addProduct"/>
+                    <include name="editProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "sellpage">
+        <classes>
+            <class name = "sellerPortal.test.createSellpage">
+                <methods>
+                    <include name="createDomainMyProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "edit sellpage">
+        <classes>
+            <class name = "sellerPortal.test.editSellpage" />
+        </classes>
+    </test>
+    <test name = "check out Paypal">
+        <classes>
+            <class name = "sellerPortal.test.verifySellpage" >
+                <methods>
+                    <include name="verifySellpage"/>
+                    <include name="checkoutPaypal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "verify checkout Paypal">
+        <classes>
+            <class name = "sellerPortal.test.myOrder" >
+                <methods>
+                    <include name="verifyMyOrderPaypal"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "check out Stripe">
+        <classes>
+            <class name = "sellerPortal.test.verifySellpage" >
+                <methods>
+                    <include name="checkoutStripe"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "verify checkout Stripe">
+        <classes>
+            <class name = "sellerPortal.test.myOrder" >
+                <methods>
+                    <include name="verifyMyOrderStripe"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

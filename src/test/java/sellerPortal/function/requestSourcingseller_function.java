@@ -6,12 +6,6 @@ import org.openqa.selenium.WebDriver;
 import sellerPortal.page.requestSourcing_page;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Properties;
 
 public class requestSourcingseller_function extends basePage {
     public requestSourcingseller_function(WebDriver driver) {
@@ -71,24 +65,24 @@ public class requestSourcingseller_function extends basePage {
 //        commonFunction.verifyElement(requestSourcingPage.numberRequest,numberRequest1);
     }
 
-    public void saveValueToSystem(String key, String data) throws IOException {
-        Path confDir = Paths.get("/e2way");
-        Files.createDirectories(confDir);
-        Path confFile = confDir.resolve("data.props");
-        if (Files.exists(confFile)) {
-            try (InputStream in = Files.newInputStream(confFile)) {
-                Properties props = new Properties();
-                props.load(in);
-                props.setProperty(key, data);
-                OutputStream output = Files.newOutputStream(confFile);
-                props.store(output, "Propertis");
-                output.close();
-            }
-        }else{
-            Files.createFile(confFile);
-        }
+//    public void saveValueToSystem(String key, String data) throws IOException {
+//        Path confDir = Paths.get("/e2way");
+//        Files.createDirectories(confDir);
+//        Path confFile = confDir.resolve("data.props");
+//        if (Files.exists(confFile)) {
+//            try (InputStream in = Files.newInputStream(confFile)) {
+//                Properties props = new Properties();
+//                props.load(in);
+//                props.setProperty(key, data);
+//                OutputStream output = Files.newOutputStream(confFile);
+//                props.store(output, "Propertis");
+//                output.close();
+//            }
+//        }else{
+//            Files.createFile(confFile);
+//        }
 //        System.setProperty("application.property",data);
-    }
+//    }
 //    public void verifyRequestSourcing(){
 //       String s = commonFunction.getText(requestSourcingPage.numberRequest);
 //       System.out.println(s);
@@ -107,7 +101,7 @@ public void verifyRequestDetail(){
         commonFunction.click(requestSourcingPage.numberRequest);
         commonFunction.verifyElement(requestSourcingPage.numberRequestDetail,numberRequest1);
         commonFunction.verifyElement(requestSourcingPage.productRequestDetail,"Quick Dry Sport Jacket");
-        commonFunction.verifyElement(requestSourcingPage.fulfiller,"eHighway partner");
+        commonFunction.verifyElement(requestSourcingPage.fulfiller,"The Plus One partner");
         commonFunction.verifyElement(requestSourcingPage.statusDetail,"Opening");
         commonFunction.verifyElement(requestSourcingPage.linkProductRequest,"Quick Dry Sport Jacket");
         commonFunction.click(requestSourcingPage.linkProductRequest);
@@ -185,56 +179,56 @@ public void verifyRequestDetail(){
     public void verifyRespondFulfill() throws InterruptedException {
         commonFunction.verifyElement(requestSourcingPage.productNameRespond,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
         //variant1
-        commonFunction.verifyElement(requestSourcingPage.variant1,"PurpleS");
-        commonFunction.click(requestSourcingPage.variant1);
+//        commonFunction.verifyElement(requestSourcingPage.variant1,"PurpleS");
+//        commonFunction.click(requestSourcingPage.variant1);
+//        commonFunction.click(requestSourcingPage.colorPuple);
+//        commonFunction.click(requestSourcingPage.sizeS);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$6.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$18.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234561");
         //variant2
-        commonFunction.verifyElement(requestSourcingPage.variant2,"PurpleM");
-        commonFunction.click(requestSourcingPage.variant2);
+        commonFunction.click(requestSourcingPage.sizeM);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$7.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$21.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234562");
         //variant3
-        commonFunction.verifyElement(requestSourcingPage.variant3,"PurpleL");
-        commonFunction.click(requestSourcingPage.variant3);
+        commonFunction.click(requestSourcingPage.sizeL);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$8.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$24.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234563");
         //variant4
-        commonFunction.verifyElement(requestSourcingPage.variant4,"GrayS");
-        commonFunction.click(requestSourcingPage.variant4);
+        commonFunction.click(requestSourcingPage.colorGray);
+        commonFunction.click(requestSourcingPage.sizeS);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$6.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$18.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234564");
         //variant5
-        commonFunction.verifyElement(requestSourcingPage.variant5,"GrayM");
-        commonFunction.click(requestSourcingPage.variant5);
+        commonFunction.click(requestSourcingPage.colorGray);
+        commonFunction.click(requestSourcingPage.sizeM);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$7.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$21.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234565");
         //variant6
-        commonFunction.verifyElement(requestSourcingPage.variant6,"GrayL");
-        commonFunction.click(requestSourcingPage.variant6);
+        commonFunction.click(requestSourcingPage.colorGray);
+        commonFunction.click(requestSourcingPage.sizeL);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$8.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$24.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234566");
         //variant7
-        commonFunction.verifyElement(requestSourcingPage.variant7,"BlueS");
-        commonFunction.click(requestSourcingPage.variant7);
+        commonFunction.click(requestSourcingPage.colorBlue);
+        commonFunction.click(requestSourcingPage.sizeS);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$6.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$18.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234567");
         //variant8
-        commonFunction.verifyElement(requestSourcingPage.variant8,"BlueM");
-        commonFunction.click(requestSourcingPage.variant8);
+        commonFunction.click(requestSourcingPage.colorBlue);
+        commonFunction.click(requestSourcingPage.sizeM);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$7.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$21.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234568");
         //variant9
-        commonFunction.verifyElement(requestSourcingPage.variant9,"BlueL");
-        commonFunction.click(requestSourcingPage.variant9);
+        commonFunction.click(requestSourcingPage.colorBlue);
+        commonFunction.click(requestSourcingPage.sizeL);
         commonFunction.verifyElement(requestSourcingPage.productCost,"$8.33");
         commonFunction.verifyElement(requestSourcingPage.suggestPrice,"$24.99");
         commonFunction.verifyElement(requestSourcingPage.sku,"Test1234569");

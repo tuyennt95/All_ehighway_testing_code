@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Orders_page {
     public By OrdersListNav = By.xpath("//p[contains(text(),'Orders List')]//ancestor::a");
-    public By search = By.xpath("//input[@placeholder='Search by orders, customer name, email, tracking number']");
+    public By search = By.xpath("//input[@placeholder='Search by orders, customer name, email, tracking number, transaction ID']");
     public By orderNumber1 = By.xpath("//tbody[@class='MuiTableBody-root css-ceeiht']/tr/td[2]/a");
     //Paypal
     public By statusOrder1 = By.xpath("//div[2]/div/div/span");

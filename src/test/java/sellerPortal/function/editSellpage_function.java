@@ -283,9 +283,11 @@ public class editSellpage_function extends basePage {
         commonFunction.verifyElement(editSellpagePage.headerPoupUpsale,"Set up for upsale page");
         commonFunction.click(editSellpagePage.hyperlinkAddSellpage);
         commonFunction.click(editSellpagePage.searchBox);
+        commonFunction.senKeys(editSellpagePage.inputSearchBox,"revenue3105.kinthemain.online");
         commonFunction.click(editSellpagePage.sellpageUpsale1);
         commonFunction.click(editSellpagePage.hyperlinkAddSellpage);
         commonFunction.click(editSellpagePage.searchBox2);
+        commonFunction.senKeys(editSellpagePage.inputsearchBox2,"bra.kinthemain.online");
         commonFunction.click(editSellpagePage.sellpageUpsale2);
         commonFunction.click(editSellpagePage.saveUpsaleBtn);
         commonFunction.verifyPage(editSellpagePage.previewBtn);
@@ -294,9 +296,10 @@ public class editSellpage_function extends basePage {
     public void configPaygate() throws InterruptedException {
         commonFunction.scroll(editSellpagePage.sectionLogo);
         commonFunction.click(editSellpagePage.addPaygateBtn);
+        Thread.sleep(5000);
 
         commonFunction.click(editSellpagePage.selectPaypalPaygate);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         commonFunction.click(editSellpagePage.paypalPaygate1);
 
         commonFunction.click(editSellpagePage.selectStripePaygate);

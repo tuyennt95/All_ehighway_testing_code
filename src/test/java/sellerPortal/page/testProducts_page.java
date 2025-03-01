@@ -2,7 +2,7 @@ package sellerPortal.page;
 
 import org.openqa.selenium.By;
 
-public class myProducts_page {
+public class testProducts_page {
     public By addProductBtn  = By.xpath("//span[contains(text(),'Add Product')]");
     public By titleProduct = By.xpath("//div[@id='information_id']//descendant::input");
 
@@ -33,6 +33,7 @@ public class myProducts_page {
     //variant
     public By variant1= By.xpath("//tbody/tr[2]/td[2]/strong");
     public By imageVariant1 = By.xpath("//tbody/tr[2]/td[3]/div");
+    public By imagePurple = By.xpath("//div[@class='ant-modal-body']//descendant::img[2]//parent::div");
     public By confirmBtn = By.xpath("//button[contains(text(),'Confirm')]");
     public By applyToAllImageV1 = By.xpath("//tbody/tr[2]/td[3]/div[2]");
     public By confirmApplyToAll =By.xpath("//span[contains(text(),'OK')]");
@@ -122,12 +123,12 @@ public class myProducts_page {
     public By saveBtn = By.xpath("//span[contains(text(),'Save')]");
     //Save and request sourcing
     public By saveAndRequestBtn= By.xpath("//span[contains(text(),'Save & Request Sourcing')]");
-    public By myProducts= By.xpath("//main//span[contains(text(),'My products')]");
+    public By testProducts= By.xpath("//main//span[contains(text(),'Test products')]");
     public By requestSourcingBtn=By.xpath("//div[@class='ant-modal-content']/div[3]/button[2]");
     public By requestSourcingPage = By.xpath("//main//span[contains(text(),'Request sourcing')]");
     public By mesError = By.xpath("//span[contains(text(),'Please complete all information')]") ;
     //edit product
-    public By productName= By.xpath("//tbody/tr[2]/td[2]/span");
+    public By productName= By.xpath("//tbody/tr[2]/td[2]//a");
     public By editBtn= By.xpath("//span[contains(text(),'Edit')]//parent::button[1]");
     public By editSellpageTitle= By.xpath("//span[contains(text(),'Edit product')]");
     public By mesSuccess = By.xpath("//span[contains(text(),'Update product success')]") ;
@@ -139,7 +140,7 @@ public class myProducts_page {
     public By requestStatus = By.xpath("//tbody/tr[2]/td[9]/div/span");
     public By sellThisProductBtn = By.xpath("//tbody/tr[2]/td[9]/button");
     //list my product
-    public By myProduct1 = By.xpath("//tbody/tr[2]/td[2]/span");
+    public By myProduct1 = By.xpath("//tbody/tr[2]/td[2]//a");
     public By sellThisProductBtn2 = By.xpath("//div[@class='ant-modal-header']//span[contains(text(),'Sell this product')]//parent::button");
     //List private product
     public By privateProductBtn = By.xpath("//span[contains(text(),'Fulfillable product')]//parent::button");

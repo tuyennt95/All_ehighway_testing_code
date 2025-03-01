@@ -7,12 +7,12 @@ import fulfillPortal.function.login_function;
 import org.testng.annotations.Test;
 
 public class createProduct extends fulfill {
+    public String email = "csnew@example.com";
+    public String password ="csnew@123";
     @Test
     public void addProduct() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("tedy@gmail.com", "Tedy@6688");
-//        loginFunction.login("fulfiller", "fulfiller@123");
-        loginFunction.login("wopigi23@gronasu.com", "wopigi23@123");
+        loginFunction.login(email,password);
 
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewAddProductPage();
@@ -30,12 +30,12 @@ public class createProduct extends fulfill {
         addProductFunction.addShippingInformation();
         addProductFunction.policyProduct();
         addProductFunction.save();
+        Thread.sleep(5000);
     }
     @Test
     public void editProduct() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-//        loginFunction.login("fulfiller", "fulfiller@123");
-        loginFunction.login("wopigi23@gronasu.com", "wopigi23@123");
+        loginFunction.login(email,password);
 
         fulfillPortal_function fulfillPortalFunction= new fulfillPortal_function(driver);
         fulfillPortalFunction.viewEditProductPage();
@@ -51,5 +51,6 @@ public class createProduct extends fulfill {
         addProductFunction.editShippingInfomation();
         addProductFunction.editPolicy();
         addProductFunction.saveEditProduct();
+        Thread.sleep(5000);
     }
 }

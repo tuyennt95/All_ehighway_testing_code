@@ -37,7 +37,7 @@ public class requestPaygate_function extends basePage {
         commonFunction.Hover(requestPaygatePage.line2);
         commonFunction.click(requestPaygatePage.actionPaypal);
         commonFunction.click(requestPaygatePage.paygateBtn);
-        commonFunction.senKeys(requestPaygatePage.searchPaygate,"paygate01 new vendor");
+        commonFunction.senKeys(requestPaygatePage.searchPaygate,"cs paygate");
         commonFunction.click(requestPaygatePage.paygate01);
         commonFunction.click(requestPaygatePage.conectBtn);
         commonFunction.click(requestPaygatePage.confirmBtn);

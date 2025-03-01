@@ -248,8 +248,8 @@ public class addProduct_function extends basePage {
 //        commonFunction.verifyPage(myProductsPage.mesError);
 //    }
     public void editTitleProduct(){
-        commonFunction.senKeyPrice(addProductPage.titleProduct,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional_newVendor");
-        String titleProduct = "Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional_newVendor";
+        commonFunction.senKeyPrice(addProductPage.titleProduct,"Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional");
+        String titleProduct = "Zipper Quick Dry Sport Jacket Outwear For Yoga Gym Professional";
         Assert.assertEquals(titleProduct,commonFunction.getValue(addProductPage.titleProduct));
     }
     public void editDescriptionProduct(){

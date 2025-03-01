@@ -7,13 +7,15 @@ import sellerPortal.function.login_function;
 import sellerPortal.function.seller_function;
 
 public class requestPaygate extends seller {
+    public String email = "soyero8019@ociun.com";
+    public String password = "soyero8019@123";
     @Test
     public void requestPaygate() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
-        sellerFunction.selectTeam();
+        sellerFunction.selectDefaultTeam();
         sellerFunction.viewEditSellpgage();
         Thread.sleep(5000);
 
@@ -34,17 +36,12 @@ public class requestPaygate extends seller {
 
         editSellpageFunction.createAnnouncementBar();
 
-//        editSellpageFunction.editDescription();
-//        driver.switchTo().defaultContent();
-
         editSellpageFunction.createCombo();
 
-//        editSellpageFunction.ShippingSetting();
+        editSellpageFunction.ShippingSetting();
 
         editSellpageFunction.clickQuantityDiscount();
         editSellpageFunction.inputDiscount1();
-
-//        editSellpageFunction.setupImageWithText();
 
         editSellpageFunction.addReview();
 
@@ -54,8 +51,7 @@ public class requestPaygate extends seller {
         editSellpageFunction.clickSavePublic();
 
         Thread.sleep(5000);
-
+        editSellpageFunction.setupUpsale();
         editSellpageFunction.requestPaygate();
-//        editSellpageFunction.verifySellpage();
     }
 }

@@ -13,7 +13,7 @@ public class Orders_function extends basePage {
     Orders_page ordersPage = new Orders_page();
     public void viewOrder1() throws InterruptedException {
         commonFunction.click(ordersPage.OrdersListNav);
-        commonFunction.senKeyPrice(ordersPage.search,"dvi");
+        commonFunction.senKeyPrice(ordersPage.search,"BYZ");
         Thread.sleep(3000);
         commonFunction.click(ordersPage.orderNumber1);
     }

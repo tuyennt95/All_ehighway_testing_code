@@ -6,10 +6,12 @@ import org.testng.annotations.Test;
 import sellerPortal.function.*;
 
 public class requestFulfill extends seller {
+    public String email = "soyero8019@ociun.com";
+    public String password = "soyero8019@123";
     @Test(priority = 1)
     public void createOrderRequest() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();
@@ -25,7 +27,7 @@ public class requestFulfill extends seller {
     @Test(priority = 2)
     public void createRequestFulfill() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();
@@ -38,7 +40,7 @@ public class requestFulfill extends seller {
     @Test
     public void verifyRejectRequestByFulfillment() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();
@@ -52,7 +54,7 @@ public class requestFulfill extends seller {
     @Test
     public void verifyInvoiceByFulfillment() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();
@@ -65,7 +67,7 @@ public class requestFulfill extends seller {
     @Test
     public void rejectInvoice() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();
@@ -79,7 +81,7 @@ public class requestFulfill extends seller {
     @Test
     public void acceptInvoice() throws InterruptedException {
         login_function loginFunction = new login_function(driver);
-        loginFunction.login("sogajib191@alvisani.com", "sogajib191@123");
+        loginFunction.login(email,password);
 
         seller_function sellerFunction = new seller_function(driver);
         sellerFunction.selectTeam();

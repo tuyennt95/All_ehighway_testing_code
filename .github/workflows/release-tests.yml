@@ -1,0 +1,75 @@
+name: Run Tests on Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Set up JDK 11
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    # Step 3: Cache Maven packages to speed up build process
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    # Step 4: Install dependencies and build the project
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+
+    # Step 5: Run tests
+    - name: Run TestNG tests
+      run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/myOrder.xml
+    - name: Run TestNG2 tests
+      run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/requsetPaygate.xml
+
+    # Step 6: Generate test report (Surefire)
+    - name: Generate test report
+      run: mvn surefire-report:report
+
+    # Step 7: Upload test results
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: target/surefire-reports
+
+    # Optional Step: Notify via email if tests fail
+    - name: Notify via email
+      if: failure()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.example.com
+        server_port: 587
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: GitHub Actions - Test Results
+        to: tuyennt@theplus1.net
+        from: github-actions@example.com
+        body: |
+          The tests have failed. Please check the attached report.
+        attachments: target/surefire-reports/*
+
+    # Optional Step: Notify via Slack if tests fail
+    - name: Slack Notification
+      if: failure()
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: '#your-channel'
+        SLACK_COLOR: '#ff0000'
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
